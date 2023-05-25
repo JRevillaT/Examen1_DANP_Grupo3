@@ -1,9 +1,7 @@
 package com.dev.leonardom.introuduccionajetpackcompose.navigation
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.*
 import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class Destinations(
@@ -11,9 +9,9 @@ sealed class Destinations(
     val title: String,
     val icon: ImageVector
 ) {
-    object Pantalla1: Destinations("pantalla1", "Home", Icons.Filled.Home)
-    object Pantalla2: Destinations("pantalla2/?newText={newText}", "Registro", Icons.Filled.Settings) {
+    object Pantalla1: Destinations("pantalla1", "Login", Icons.Filled.Login)
+    object Pantalla2: Destinations("pantalla2/?newText={newText}", "Registro", Icons.Filled.TableRows) {
         fun createRoute(newText: String) = "pantalla2/?newText=$newText"
     }
-    object Pantalla3: Destinations("pantalla3", "Ver Registros", Icons.Filled.Favorite)
+    object Pantalla3: Destinations("pantalla3", "Ver Registros", Icons.Filled.List)
 }

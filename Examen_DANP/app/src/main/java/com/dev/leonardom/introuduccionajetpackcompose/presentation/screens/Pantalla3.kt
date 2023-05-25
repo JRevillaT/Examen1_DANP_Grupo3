@@ -1,9 +1,7 @@
 package com.dev.leonardom.introuduccionajetpackcompose.presentation
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,7 +16,9 @@ import com.dev.leonardom.introuduccionajetpackcompose.navigation.Destinations
 @Composable
 fun Pantalla3() {
     Column(
-        modifier = Modifier.fillMaxSize().padding(16.dp),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
         verticalArrangement = Arrangement.SpaceAround,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -26,5 +26,14 @@ fun Pantalla3() {
             text = "Pantalla 3",
             style = TextStyle(color = Color.Black, fontSize = 42.sp, fontWeight = FontWeight.Black)
         )
+        /*LazyColumn(
+            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
+        ){
+            Text(
+                text = "Pantalla 3",
+                style = TextStyle(color = Color.Black, fontSize = 42.sp, fontWeight = FontWeight.Black)
+            )
+        }*/
+
     }
 }
