@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.danp_examen01.R
 
-@Composable
+@Composable    
 fun Pantalla1(
     navegarPantalla2: (String) -> Unit
 ) {
